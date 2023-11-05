@@ -1,23 +1,3 @@
-﻿// defined from .NET Framework 4.0 and NETFX_CORE
-
-using System;
-
-#if !(NETFX_CORE || NET_4_6 || NET_STANDARD_2_0 || UNITY_WSA_10_0)
-
-namespace UniRx
-{
-    public interface IObservable<T>
-    {
-        IDisposable Subscribe(IObserver<T> observer);
-    }
-}
-
-#endif
-
-namespace UniRx
-{
-    public interface IGroupedObservable<TKey, TElement> : IObservable<TElement>
-    {
-        TKey Key { get; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c79b06f4c0af9d57e247849fd676875623ee05aa1f7863f2f49c2fb3e89d45f
+size 405

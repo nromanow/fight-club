@@ -1,17 +1,3 @@
-{
-    "name": "Meta",
-    "rootNamespace": "",
-    "references": [
-        "UniRx",
-        "Core"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:885fccf0a1601e690af95dbe86e6bf9a2b00e44308c88b5a00409531082044e6
+size 403

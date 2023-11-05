@@ -1,36 +1,3 @@
-﻿// for uGUI(from 4.6)
-#if !(UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_4 || UNITY_4_5)
-
-using System; // require keep for Windows Universal App
-using UnityEngine;
-using UnityEngine.EventSystems;
-
-namespace UniRx.Triggers
-{
-    [DisallowMultipleComponent]
-    public class ObservableSelectTrigger : ObservableTriggerBase, IEventSystemHandler, ISelectHandler
-    {
-        Subject<BaseEventData> onSelect;
-
-        void ISelectHandler.OnSelect(BaseEventData eventData)
-        {
-            if (onSelect != null) onSelect.OnNext(eventData);
-        }
-
-        public IObservable<BaseEventData> OnSelectAsObservable()
-        {
-            return onSelect ?? (onSelect = new Subject<BaseEventData>());
-        }
-
-        protected override void RaiseOnCompletedOnDestroy()
-        {
-            if (onSelect != null)
-            {
-                onSelect.OnCompleted();
-            }
-        }
-    }
-}
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:12eb04dd0dfb89bc21213bd1379c07e21fe9546536512dc15d751e81a5201059
+size 928

@@ -1,20 +1,3 @@
-﻿using Core.App;
-using Core.Meta.App;
-using Core.Meta.UI.App;
-using UnityEngine;
-
-namespace Core.Meta.Modules {
-	[CreateAssetMenu(menuName = "App/Modules/BaseMetaModule", fileName = "BaseMetaModule")]
-	public class BaseMetaModule : AppModule {
-		[SerializeField]
-		private UIMetaInitializerService.Settings _uiInitSettings;
-		
-		public override void OnInitialize (AppComponentRegistry componentRegistry) {
-			componentRegistry
-				.Instantiate<UIMetaInitializerService>(_uiInitSettings, componentRegistry)
-				.Initialize();
-			
-			componentRegistry.Instantiate<UIScreenService>();
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c56dabde3a2122b2a35b76567e7de889ba2a3271a8ab1286d905bfd3dfd3c09a
+size 583

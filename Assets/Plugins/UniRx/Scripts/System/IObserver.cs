@@ -1,17 +1,3 @@
-﻿// defined from .NET Framework 4.0 and NETFX_CORE
-
-#if !(NETFX_CORE || NET_4_6 || NET_STANDARD_2_0 || UNITY_WSA_10_0)
-
-using System;
-
-namespace UniRx
-{
-    public interface IObserver<T>
-    {
-        void OnCompleted();
-        void OnError(Exception error);
-        void OnNext(T value);
-    }
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:76cd11ddc1740a9f6d1f4d43e78bf3d1088ef028674c53700f633174879fa99d
+size 307

@@ -1,27 +1,3 @@
-﻿using System;
-
-namespace UniRx
-{
-    public interface IOptimizedObservable<T> : IObservable<T>
-    {
-        bool IsRequiredSubscribeOnCurrentThread();
-    }
-
-    public static class OptimizedObservableExtensions
-    {
-        public static bool IsRequiredSubscribeOnCurrentThread<T>(this IObservable<T> source)
-        {
-            var obs = source as IOptimizedObservable<T>;
-            if (obs == null) return true;
-
-            return obs.IsRequiredSubscribeOnCurrentThread();
-        }
-
-        public static bool IsRequiredSubscribeOnCurrentThread<T>(this IObservable<T> source, IScheduler scheduler)
-        {
-            if (scheduler == Scheduler.CurrentThread) return true;
-
-            return IsRequiredSubscribeOnCurrentThread(source);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fec571d4da0367596400b68b14002057451d8d6323a73d36a7c8d8b8df2d1a59
+size 770

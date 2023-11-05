@@ -1,27 +1,3 @@
-﻿using UnityEngine;
-
-namespace Core.App {
-	[CreateAssetMenu(menuName = "App/Nodes/BaseAppNode")]
-	public class AppNode : ScriptableObject {
-		private AppComponentRegistry _componentRegistry = new();
-		
-		[SerializeField]
-		private AppModule[] _modules;
-		
-		public void InitializeNode () {
-			_componentRegistry = new AppComponentRegistry();
-			
-			foreach (var module in _modules) {
-				module.OnInitialize(_componentRegistry);
-			}
-		}
-		
-		public void DisposeNode () {
-			foreach (var module in _modules) {
-				module.OnDispose();
-			}
-			
-			_componentRegistry.Dispose();
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aadede5c5b4f9962bb0286860f7375e47d55c45f01099d1c9a0ffdccf9fefbb9
+size 587

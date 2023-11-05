@@ -1,35 +1,3 @@
-﻿using Core.Meta.UI.Api;
-using Core.Meta.UI.Data.Forms;
-using Core.Meta.UI.Data.Layers;
-using System;
-using System.Linq;
-
-namespace Core.Meta.UI.App {
-	public class UIScreenService : IUIScreenService {
-		private readonly GUILayer[] _layers;
-
-		public UIScreenService (GUILayer[] layers) {
-			_layers = layers;
-		}
-
-		public void ShowForm<T> (GUIForm form, T item = default) {
-			GetLayer(form.layerType)
-				.CreateFormInstance(form, item);
-		}
-		
-		public void CloseForm (GUIForm form) {
-			GetLayer(form.layerType)
-				.DestroyFormInstance(form);
-		}
-
-		private GUILayer GetLayer (GUILayerType formLayerType) { 
-			var layer = _layers.SingleOrDefault(x => x.layerType == formLayerType);
-
-			if (layer == null) {
-				throw new ArgumentException($"Layer with type {formLayerType} not found");
-			}
-
-			return layer;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f5cb1c9c0e0c55ed307ec78fc1942fd7dcdc79d5dd1d748d86af439e14911c9
+size 827

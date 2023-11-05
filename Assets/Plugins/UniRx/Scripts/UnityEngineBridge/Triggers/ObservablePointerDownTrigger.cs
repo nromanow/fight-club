@@ -1,36 +1,3 @@
-﻿// for uGUI(from 4.6)
-#if !(UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_4 || UNITY_4_5)
-
-using System; // require keep for Windows Universal App
-using UnityEngine;
-using UnityEngine.EventSystems;
-
-namespace UniRx.Triggers
-{
-    [DisallowMultipleComponent]
-    public class ObservablePointerDownTrigger : ObservableTriggerBase, IEventSystemHandler, IPointerDownHandler
-    {
-        Subject<PointerEventData> onPointerDown;
-
-        void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
-        {
-            if (onPointerDown != null) onPointerDown.OnNext(eventData);
-        }
-
-        public IObservable<PointerEventData> OnPointerDownAsObservable()
-        {
-            return onPointerDown ?? (onPointerDown = new Subject<PointerEventData>());
-        }
-
-        protected override void RaiseOnCompletedOnDestroy()
-        {
-            if (onPointerDown != null)
-            {
-                onPointerDown.OnCompleted();
-            }
-        }
-    }
-}
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2eabc95d2b93b854d4fa7029c62669afc490571c7258be960c6aa1ec61cc4a7
+size 1000

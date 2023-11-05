@@ -1,15 +1,3 @@
-﻿namespace UniRx.InternalUtil
-{
-	using System;
-
-	internal static class ExceptionExtensions
-	{
-		public static void Throw(this Exception exception)
-		{
-#if (NET_4_6 || NET_STANDARD_2_0)
-			System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(exception).Throw();
-#endif
-            throw exception;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41b2a266c8478c32a20bc34b8d426226b30fb50a8ad77674da3590591f4cb8a3
+size 318

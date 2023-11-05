@@ -1,33 +1,3 @@
-﻿using System;
-using System.Threading;
-
-namespace UniRx.Operators
-{
-    public abstract class OperatorObserverBase<TSource, TResult> : IDisposable, IObserver<TSource>
-    {
-        protected internal volatile IObserver<TResult> observer;
-        IDisposable cancel;
-
-        public OperatorObserverBase(IObserver<TResult> observer, IDisposable cancel)
-        {
-            this.observer = observer;
-            this.cancel = cancel;
-        }
-
-        public abstract void OnNext(TSource value);
-
-        public abstract void OnError(Exception error);
-
-        public abstract void OnCompleted();
-
-        public void Dispose()
-        {
-            observer = UniRx.InternalUtil.EmptyObserver<TResult>.Instance;
-            var target = System.Threading.Interlocked.Exchange(ref cancel, null);
-            if (target != null)
-            {
-                target.Dispose();
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3cbb6dc26847a7767c6afee5743c8a25afd83a38f30acf4b4464e8b4df04d8ee
+size 909

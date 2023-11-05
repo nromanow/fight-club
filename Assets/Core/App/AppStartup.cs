@@ -1,24 +1,3 @@
-﻿using UnityEngine;
-
-namespace Core.App {
-	public class AppStartup : MonoBehaviour {
-		[SerializeField]
-		private AppNode[] _nodes;
-
-		private void Awake () {
-			DontDestroyOnLoad(this.gameObject);
-		}
-
-		private void Start () {
-			foreach (var node in _nodes) {
-				node.InitializeNode();
-			}
-		}
-		
-		private void OnDestroy () {
-			foreach (var node in _nodes) {
-				node.DisposeNode();
-			}
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff9c820b80daf877437415995fe63600413ca783e909576460de00d294bfe74b
+size 406

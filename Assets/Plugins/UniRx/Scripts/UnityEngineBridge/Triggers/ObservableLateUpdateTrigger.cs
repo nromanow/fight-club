@@ -1,31 +1,3 @@
-﻿using System; // require keep for Windows Universal App
-using UnityEngine;
-
-namespace UniRx.Triggers
-{
-    [DisallowMultipleComponent]
-    public class ObservableLateUpdateTrigger : ObservableTriggerBase
-    {
-        Subject<Unit> lateUpdate;
-
-        /// <summary>LateUpdate is called every frame, if the Behaviour is enabled.</summary>
-        void LateUpdate()
-        {
-            if (lateUpdate != null) lateUpdate.OnNext(Unit.Default);
-        }
-
-        /// <summary>LateUpdate is called every frame, if the Behaviour is enabled.</summary>
-        public IObservable<Unit> LateUpdateAsObservable()
-        {
-            return lateUpdate ?? (lateUpdate = new Subject<Unit>());
-        }
-
-        protected override void RaiseOnCompletedOnDestroy()
-        {
-            if (lateUpdate != null)
-            {
-                lateUpdate.OnCompleted();
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:45b9f5f063dd8a764b4e4289ac045b25e5804df2db090971d6fc5101c96c5a98
+size 893

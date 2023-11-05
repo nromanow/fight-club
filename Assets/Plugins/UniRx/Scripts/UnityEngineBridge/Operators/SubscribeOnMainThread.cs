@@ -1,31 +1,3 @@
-﻿using System;
-
-namespace UniRx.Operators
-{
-    internal class SubscribeOnMainThreadObservable<T> : OperatorObservableBase<T>
-    {
-        readonly IObservable<T> source;
-        readonly IObservable<long> subscribeTrigger;
-
-        public SubscribeOnMainThreadObservable(IObservable<T> source, IObservable<long> subscribeTrigger)
-            : base(source.IsRequiredSubscribeOnCurrentThread())
-        {
-            this.source = source;
-            this.subscribeTrigger = subscribeTrigger;
-        }
-
-        protected override IDisposable SubscribeCore(IObserver<T> observer, IDisposable cancel)
-        {
-            var m = new SingleAssignmentDisposable();
-            var d = new SerialDisposable();
-            d.Disposable = m;
-
-            m.Disposable = subscribeTrigger.SubscribeWithState3(observer, d, source, (_, o, disp, s) =>
-            {
-                disp.Disposable = s.Subscribe(o);
-            });
-
-            return d;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af2c9e7b3b5c0c4d426f9811ce7bdd1e61648449ad6a5b98c75478f6c972d1a3
+size 966

@@ -1,20 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace UniRx
-{
-    public static partial class DisposableExtensions
-    {
-        /// <summary>Add disposable(self) to CompositeDisposable(or other ICollection). Return value is self disposable.</summary>
-        public static T AddTo<T>(this T disposable, ICollection<IDisposable> container)
-            where T : IDisposable
-        {
-            if (disposable == null) throw new ArgumentNullException("disposable");
-            if (container == null) throw new ArgumentNullException("container");
-
-            container.Add(disposable);
-
-            return disposable;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f9f787313d136cef14c90734aa6303ca5b0d4a63fee31c98a456cb232fad7f8
+size 645

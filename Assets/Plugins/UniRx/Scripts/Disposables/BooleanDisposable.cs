@@ -1,25 +1,3 @@
-﻿using System;
-using System.Collections;
-
-namespace UniRx
-{
-    public sealed class BooleanDisposable : IDisposable, ICancelable
-    {
-        public bool IsDisposed { get; private set; }
-
-        public BooleanDisposable()
-        {
-
-        }
-
-        internal BooleanDisposable(bool isDisposed)
-        {
-            IsDisposed = isDisposed;
-        }
-
-        public void Dispose()
-        {
-            if (!IsDisposed) IsDisposed = true;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e21d597cffe3a08a06cec83048ec5797dc626bb44c4c9f100dbba3ee2b1a9737
+size 463
