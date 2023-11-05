@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:36343703591fe38589ad4e0a2ab2cbf69a86d24a38172c8273c418bd0085799b
-size 453
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 \
+http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.google.firebase</groupId>
+  <artifactId>firebase-app-unity</artifactId>
+  <version>11.6.0</version>
+  <packaging>aar</packaging>
+  <dependencies>
+
+  </dependencies>
+</project>

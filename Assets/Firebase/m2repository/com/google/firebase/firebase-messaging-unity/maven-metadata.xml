@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f245a146c99ce73dd3b2498237d289259b0ecd3a157c7cbef781e83298c0a5ae
-size 247
+<metadata>
+  <groupId>com.google.firebase</groupId>
+  <artifactId>firebase-messaging-unity</artifactId>
+  <versioning>
+    <release>11.6.0</release>
+    <versions><version>11.6.0</version></versions>
+    <lastUpdated/>
+  </versioning>
+</metadata>

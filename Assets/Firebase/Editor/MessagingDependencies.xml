@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:52786bb64836cd9692c030799bc90cfc1bb36d95c8cc2e4b0e025fd2d338ffc6
-size 884
+<!-- Copyright (C) 2019 Google Inc. All Rights Reserved.
+
+FirebaseMessaging iOS and Android Dependencies.
+-->
+
+<dependencies>
+  <iosPods>
+    <iosPod name="Firebase/Messaging" version="10.15.0" minTargetSdk="8.0">
+    </iosPod>
+  </iosPods>
+  <androidPackages>
+    <androidPackage spec="com.google.firebase:firebase-messaging:23.2.1">
+    </androidPackage>
+    <androidPackage spec="com.google.firebase:firebase-analytics:21.3.0">
+    </androidPackage>
+    <androidPackage spec="com.google.firebase:firebase-iid:21.1.0">
+    </androidPackage>
+    <androidPackage spec="com.google.flatbuffers:flatbuffers-java:1.12.0">
+    </androidPackage>
+    <androidPackage spec="com.google.firebase:firebase-messaging-unity:11.6.0">
+      <repositories>
+        <repository>Assets/Firebase/m2repository</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+</dependencies>

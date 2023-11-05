@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1615770922272e6650b72273b35ca3a2a00dcc8263ce0bcbf0ea8d43fa9575fa
-size 249
+fileFormatVersion: 2
+guid: 992fedef98ac42209a9d26d5bf364adf
+labels:
+- gvh
+- gvh_version-11.6.0
+- gvhp_exportpath-Firebase/Editor/MessagingDependencies.xml
+timeCreated: 1480838400
+DefaultImporter:
+  userData:
+  assetBundleName:
+  assetBundleVariant:

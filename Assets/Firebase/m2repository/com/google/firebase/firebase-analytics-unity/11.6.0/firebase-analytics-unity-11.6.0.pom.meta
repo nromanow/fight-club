@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a7fcd89c670ce113e4ac128cb59c71121fb1ee808b3f1c20624a7f8caa67691c
-size 317
+fileFormatVersion: 2
+guid: e76c63e8331843758132d842a6b4f373
+labels:
+- gvh
+- gvh_version-11.6.0
+- gvhp_exportpath-Firebase/m2repository/com/google/firebase/firebase-analytics-unity/11.6.0/firebase-analytics-unity-11.6.0.pom
+timeCreated: 1480838400
+DefaultImporter:
+  userData:
+  assetBundleName:
+  assetBundleVariant:
